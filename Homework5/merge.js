@@ -1,11 +1,11 @@
 const array1 = [34, 54, 1, 4, 65, 100, 97, 10, 2, 3, 6];
 
-const mergeSort = function merge(arr) {
+function mergeSort(arr) {
     if (arr.length < 2) {
         return arr;
     }  else {
-        const left = merge(arr.slice(0, arr.length/2 ))
-        const rigth = merge(arr.slice(arr.length/2))
+        const left = mergeSort(arr.slice(0, arr.length/2 ))
+        const rigth = mergeSort(arr.slice(arr.length/2))
 
         let i = j = 0;
 
